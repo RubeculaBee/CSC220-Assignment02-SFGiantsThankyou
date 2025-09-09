@@ -26,6 +26,9 @@ public final class ChatSession {
     public ChatSession() {
     }
 
+    //TODO: Implement
+    public ChatSession(Club club, University university){}
+
     //
     // Instance Methods
     //

@@ -30,4 +30,8 @@ public final class OwnerGroup extends Organization{
     //
     // Override
     //
+
+    //TODO: Implement
+    public void displayMission(){}
+    public void displayAbout(){}
 }

@@ -9,6 +9,8 @@
  */
 
 package assignment02PartB;
+import java.io.OutputStream;
+
 // Please organize all the given files in 1 same package
 // Please make sure to read the provided "_ListOf-PleaseDoNotChange.txt"
 
@@ -30,6 +32,13 @@ public class StdOutStdErrTee extends OutputStream {
     // Instance Methods
     //
 
+    //TODO: Implement
+    public void startLog(){}
+    public void stopLog(){}
+
+    public String getStdOutFilePath(){return "";}
+    public String getStdErrFilePath(){return "";}
+
     //
     // Additional Methods
     //
@@ -41,4 +50,8 @@ public class StdOutStdErrTee extends OutputStream {
     //
     // Override
     //
+
+    //TODO: Implement
+    @Override
+    public void write(int i){}
 }

@@ -26,6 +26,9 @@ public final class University extends Organization {
     //
     public University() {
     }
+    
+    //TODO: Implement
+    public University(String university){}
 
     //
     // Instance Methods
@@ -42,4 +45,8 @@ public final class University extends Organization {
     //
     // Override
     //
+
+    //TODO: Implement
+    public void displayMission(){}
+    public void displayAbout(){}
 }

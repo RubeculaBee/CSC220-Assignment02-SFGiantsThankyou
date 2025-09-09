@@ -35,4 +35,8 @@ public final class President extends Person {
     //
     // Override
     //
+
+    //TODO: Implement
+    @Override
+    public void sayGreeting(String greeting){}
 }

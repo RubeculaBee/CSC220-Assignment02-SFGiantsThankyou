@@ -12,8 +12,6 @@ package assignment02PartB;
 // Please organize all the given files in 1 same package
 // Please make sure to read the provided "_ListOf-PleaseDoNotChange.txt"
 
-import java.util.ArrayList;
-
 public final class Student extends Person {
 
     //
@@ -41,4 +39,8 @@ public final class Student extends Person {
     //
     // Override
     //
+
+    //TODO: Implement
+    @Override
+    public void sayGreeting(String greeting){}
 }

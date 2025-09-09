@@ -52,6 +52,11 @@ public final class Language {
     // Static Methods
     //
 
+    //TODO: Implement
+    public static void displayAppHeader(){}
+    public static Language setLanguagePreference(){return new Language();}
+
+
     //
     // Additional Static Methods
     //
@@ -59,6 +64,22 @@ public final class Language {
     //
     // Instance Methods
     //
+
+    // TODO: Implement
+    public void populateEnglishPhrases(){}
+    public void populateAlienPhrases(){}
+
+    public String getGreetingPhrase(int i){return "";}
+    public String getConfigPhrase(int i){return "";}
+    public String getLanguage(){return "";}
+    public String getUniversityPhrase(int i){return "";}
+    public String getClubPhrase(int i){return "";}
+
+    // Future Implementation
+    public void populateChinesePhrases(){}
+    public void populateFrenchPhrases(){}
+    public void populateSpanishPhrases(){}
+    public void populateYourLanguagePhrases(){}
 
     //
     // Language

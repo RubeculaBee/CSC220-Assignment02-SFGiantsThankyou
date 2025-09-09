@@ -32,6 +32,9 @@ public class Timer {
     // Static Methods
     //
 
+    //TODO: Implement
+    public static Timer setTimeZonePreference(){return new Timer();}
+
     //
     // Additional Static Methods
     //
@@ -39,6 +42,9 @@ public class Timer {
     //
     // Instance Methods
     //
+
+    //TODO: Implement
+    public String getTimeZoneFormatted(){return "";}
 
     //
     // Additional Instance Methods

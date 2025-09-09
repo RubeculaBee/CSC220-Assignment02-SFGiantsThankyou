@@ -39,6 +39,9 @@ public final class Color {
     // Instance Methods
     //
 
+    //TODO: Implement
+    public String getColorSequences(){return "";}
+
     //
     // Language
     //
