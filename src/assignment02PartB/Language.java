@@ -20,15 +20,23 @@ package assignment02PartB;
 // - Yet, curiosity for intelligence is always highly encouraged:
 // https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/util/ResourceBundle.html
 
+import java.util.Scanner;
+import java.util.Arrays;
 public final class Language {
     //
     // Static Data Fields
     //    
     private static final String defaultAlienSound = "~ ąļīæń ~ "; // Default
+    private static final String[] validLanguages = {"english", "alien", "chinese", "french", "spanish"};
 
     //
     // Instance Data Fields
     //
+
+    String greetingPhrases[];
+    String configPhrases[];
+    String universityPhrases[];
+    String clubPhrases[];
 
     //
     // Constructors
@@ -53,8 +61,30 @@ public final class Language {
     //
 
     //TODO: Implement
-    public static void displayAppHeader(){}
-    public static Language setLanguagePreference(){return new Language();}
+    public static void displayAppHeader()
+    {
+        System.out.println(Config.getOfficialAppHeader());
+    }
+    public static Language setLanguagePreference()
+    {
+        Scanner input = new Scanner(System.in);
+
+        String choice;
+
+        while(true)
+        {
+            System.out.print("Language: ");
+            choice = input.nextLine();
+            
+            for(String validChoice : validLanguages)
+            {
+                if(choice.toLowerCase().equals(validChoice))
+                    System.out.println("debug: valid");
+            }
+            System.out.println("Language: UNSUPPORTED language. Please enter your language.");
+            System.out.println("Language: English, Chinese, French, Spanish, Alien");
+        }
+    }
 
 
     //
