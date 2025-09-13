@@ -35,8 +35,9 @@ public final class Language {
 
     private String languageName;
 
-    private String[] greetingPhrases;
     private String[] configPhrases;
+    private String[] timerPhrases;
+    private String[] greetingPhrases;
     private String[] universityPhrases;
     private String[] clubPhrases;
 
@@ -80,10 +81,7 @@ public final class Language {
             for(String validChoice : validLanguages)
             {
                 if(choice.toLowerCase().equals(validChoice))
-                {
-                    input.close();
                     return new Language(choice);
-                }
             }
             System.out.println("Language: UNSUPPORTED language. Please enter your language.");
             System.out.println("Language: English, Chinese, French, Spanish, Alien");
@@ -107,16 +105,28 @@ public final class Language {
         configPhrases = new String[] 
         {
             "-".repeat(70),
-            "Language:",
-            "Time Zone:",
-            "Color Sequences:",
-            "Standard Output Log:",
-            "Standard Error Log:",
-            "Receipt Log:",
+            "Language: ",
+            "Time Zone: ",
+            "Color Sequences: ",
+            "Standard Output Log: ",
+            "Standard Error Log: ",
+            "Receipt Log: ",
             "Receipt-*-*.log",
-            "Default University:",
-            "Default Club:"
+            "Default University: ",
+            "Default Club: ",
         };
+
+        timerPhrases = new String[]
+        {
+            "INVALID time zone. Please enter your time zone.",
+            "Pacific Standard Time not in Day Light Saving",
+            "Pacific Standard Time in Day Light Saving",
+            "Central Standard Time not in Day Light Saving",
+            "Central Standard Time in Day Light Saving",
+            "Eastern Standard Time not in Day Light Saving",
+            "Eastern Standard Time in Day Light Saving"
+        };
+        
         greetingPhrases = new String[] {""};
         greetingPhrases = new String[] {""};
         greetingPhrases = new String[] {""};
@@ -125,9 +135,10 @@ public final class Language {
     // TODO: Implement
     public void populateAlienPhrases(){}
 
-    public String getGreetingPhrase(int i){return "";}
-    public String getConfigPhrase(int i){return configPhrases[i];}
     public String getLanguage(){return languageName;}
+    public String getConfigPhrase(int i){return configPhrases[i];}
+    public String getTimerPhrase(int i){return timerPhrases[i];};
+    public String getGreetingPhrase(int i){return "";}
     public String getUniversityPhrase(int i){return "";}
     public String getClubPhrase(int i){return "";}
 
