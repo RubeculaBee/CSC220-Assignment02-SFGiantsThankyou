@@ -33,10 +33,12 @@ public final class Language {
     // Instance Data Fields
     //
 
-    static String greetingPhrases[];
-    static String configPhrases[];
-    static String universityPhrases[];
-    static String clubPhrases[];
+    private String languageName;
+
+    private String[] greetingPhrases;
+    private String[] configPhrases;
+    private String[] universityPhrases;
+    private String[] clubPhrases;
 
     //
     // Constructors
@@ -60,7 +62,6 @@ public final class Language {
     // Static Methods
     //
 
-    //TODO: Implement
     public static void displayAppHeader()
     {
         System.out.println(Config.getOfficialAppHeader());
@@ -99,12 +100,32 @@ public final class Language {
     //
 
     // TODO: Implement
-    public void populateEnglishPhrases(){}
+    public void populateEnglishPhrases()
+    {
+        languageName = "ENGLISH";
+
+        configPhrases = new String[] 
+        {
+            "-".repeat(70),
+            "Language:",
+            "Time Zone:",
+            "Color Sequences:",
+            "Standard Output Log:",
+            "Standard Error Log:",
+            "Receipt Log:",
+            "Receipt-*-*.log",
+            "Default University:",
+            "Default Club:"
+        };
+        greetingPhrases = new String[] {""};
+        greetingPhrases = new String[] {""};
+        greetingPhrases = new String[] {""};
+    }
     public void populateAlienPhrases(){}
 
     public String getGreetingPhrase(int i){return "";}
-    public String getConfigPhrase(int i){return "";}
-    public String getLanguage(){return "";}
+    public String getConfigPhrase(int i){return configPhrases[i];}
+    public String getLanguage(){return languageName;}
     public String getUniversityPhrase(int i){return "";}
     public String getClubPhrase(int i){return "";}
 
