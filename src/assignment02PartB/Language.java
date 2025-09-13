@@ -99,7 +99,7 @@ public final class Language {
     // Instance Methods
     //
 
-    // TODO: Implement
+    
     public void populateEnglishPhrases()
     {
         languageName = "ENGLISH";
@@ -121,6 +121,8 @@ public final class Language {
         greetingPhrases = new String[] {""};
         greetingPhrases = new String[] {""};
     }
+
+    // TODO: Implement
     public void populateAlienPhrases(){}
 
     public String getGreetingPhrase(int i){return "";}
