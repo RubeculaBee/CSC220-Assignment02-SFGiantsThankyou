@@ -33,10 +33,10 @@ public final class Language {
     // Instance Data Fields
     //
 
-    String greetingPhrases[];
-    String configPhrases[];
-    String universityPhrases[];
-    String clubPhrases[];
+    static String greetingPhrases[];
+    static String configPhrases[];
+    static String universityPhrases[];
+    static String clubPhrases[];
 
     //
     // Constructors
@@ -79,7 +79,10 @@ public final class Language {
             for(String validChoice : validLanguages)
             {
                 if(choice.toLowerCase().equals(validChoice))
-                    System.out.println("debug: valid");
+                {
+                    input.close();
+                    return new Language(choice);
+                }
             }
             System.out.println("Language: UNSUPPORTED language. Please enter your language.");
             System.out.println("Language: English, Chinese, French, Spanish, Alien");
