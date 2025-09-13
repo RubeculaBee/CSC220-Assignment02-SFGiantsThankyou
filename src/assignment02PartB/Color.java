@@ -39,8 +39,7 @@ public final class Color {
     // Instance Methods
     //
 
-    //TODO: Implement
-    public String getColorSequences(){return "";}
+    public String getColorSequences(){return Config.getDefaultColorSequences();}
 
     //
     // Language
