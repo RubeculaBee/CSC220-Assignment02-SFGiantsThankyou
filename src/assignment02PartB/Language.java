@@ -125,7 +125,11 @@ public final class Language {
             " - Chat session Ended.",           // 17
 
             "*** Congrats! You won FREE TICKETS to SF GIANTS Games ***",// 18
-            "____ Please try again at your graduation ceremony. ____"   // 19
+            "____ Please try again at your graduation ceremony. ____",  // 19
+
+            "Please enter an INTEGER. ",//20
+            "Please enter a NON-NEGATIVE integer. ",//21
+            " tries left"               //22
         };
 
         timerPhrases = new String[]

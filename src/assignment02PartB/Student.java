@@ -21,6 +21,7 @@ public final class Student extends Person {
     //
 
     private String email;
+    private String colouredName;
 
     //
     // Constructors
@@ -32,6 +33,8 @@ public final class Student extends Person {
     {
         super(firstName, lastName);
         this.email = email;
+        
+        this.colouredName = Color.SFSUHighlight(getFirstName() + " " + getLastName());
     }
 
     //
@@ -42,8 +45,6 @@ public final class Student extends Person {
     {
         Scanner input = new Scanner(System.in);
 
-        String colouredName = Color.SFSUHighlight(getFirstName() + " " + getLastName());
-
         System.out.printf("%s: ", colouredName);
 
         return input.nextLine();
@@ -53,11 +54,18 @@ public final class Student extends Person {
     {
         Scanner input = new Scanner(System.in);
 
-        String colouredName = Color.SFSUHighlight(getFirstName() + " " + getLastName());
-
         System.out.printf("%s: %s ", colouredName, startString);
 
         return input.nextLine();
+    }
+
+    public int sayInt()
+    {
+        Scanner input = new Scanner(System.in);
+
+        System.out.printf("%s: ", colouredName);
+
+        return input.nextInt();
     }
 
     //

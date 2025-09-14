@@ -13,6 +13,7 @@ package assignment02PartB;
 // Please make sure to read the provided "_ListOf-PleaseDoNotChange.txt"
 
 import java.util.Date;
+import java.util.InputMismatchException;
 
 public final class ChatSession {
 
@@ -91,11 +92,9 @@ public final class ChatSession {
         university.getSudent().say();
 
         club.getPlayer().say(3, fname, 4);
-        club.getPlayer().say(5, club.getShortName(), 6);
 
         designThankYouCards();
 
-        university.getSudent().say();
         club.getPlayer().say(14, fname, 15);
     }
 
@@ -103,7 +102,32 @@ public final class ChatSession {
     {
         final String fname = university.getSudent().getFirstName() + ". ";
         
-        int numCards = Integer.parseInt(university.getSudent().say());
+        int numCards = -1;
+        int triesLeft = 4;
+        while(true)
+        {
+            if(--triesLeft < 0)
+                return;
+            
+            club.getPlayer().say(5, club.getShortName(), 6);
+
+            try{
+                numCards = university.getSudent().sayInt();
+            }
+            catch(InputMismatchException e){
+                System.out.println(getPhrase(20) + triesLeft + getPhrase(22));
+                System.out.println(e);
+                continue;
+            }
+
+            
+            if(numCards == 0)
+                return;
+            else if(numCards > 0)
+                break;
+            else
+                System.out.println(getPhrase(21) + triesLeft + getPhrase(22));
+        }
 
         club.getPlayer().say(7, "\n", 8, "\n", 9, "\n", 10);
 
@@ -116,7 +140,14 @@ public final class ChatSession {
         {
             club.getPlayer().say(11, String.valueOf(i+1), ":");
             recipients[i] = university.getSudent().say("[1]");
-            symbols[i] = university.getSudent().say("[2]").charAt(0);
+            
+            try{
+                symbols[i] = university.getSudent().say("[2]").charAt(0);
+            }
+            catch(StringIndexOutOfBoundsException e){
+                symbols[i] = ' ';
+            }
+
             messages[i] = university.getSudent().say("[3]");
         }
 
@@ -135,6 +166,8 @@ public final class ChatSession {
 
             System.out.println();
         }
+
+        university.getSudent().say();
     }
 
     private void runQuiz() 
