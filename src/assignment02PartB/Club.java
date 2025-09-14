@@ -18,21 +18,52 @@ public final class Club extends Organization {
     // Instance Data Fields
     //
 
+    private String name;
+    private String shortName;
+    private int dateOfEstablishment;
+    private String[] colors;
+    private String ballpark;
+    private int numWorldSeriesTitles;
+    private int numNLPennants;
+    private int numDivisionTitles;
+    private int numWildCardBerths;
+    private OwnerGroup owners;
+    private President president;
+    private GeneralManager generalManager;
+    private Manager manager;
+
+
     //
     // Constructors
     //
     public Club() {
     }
 
-    //TODO: Implement
-    public Club(String club){}
+    public Club(String club)
+    {
+        if(club == "San Francisco Giants")
+        {
+            name = "San Francisco Giants";
+            shortName = "SF Giants";
+            dateOfEstablishment = 1883;
+            colors = new String[] {"Orange", "Black", "Gold", "Cream"};
+            ballpark = "Oracle Park";
+            numWorldSeriesTitles = 8;
+            numNLPennants = 23;
+            numDivisionTitles = 8;
+            numWildCardBerths = 3;
+            owners = new OwnerGroup("San Francisco Baseball Associates LLC");
+            president = new President("Farhan", "Zaidi");
+            generalManager = new GeneralManager("Scott", "Harris");
+            manager = new Manager("Gabe", "Keplar");
+        }
+    }
 
     //
     // Static Methods
     //
 
-    //TODO: Implement
-    public static String getOfficialSong(){return "";}
+    public static String getOfficialSong(){return "Take Me out to the Ball Game";}
 
     //
     // Instance Methods
@@ -54,7 +85,36 @@ public final class Club extends Organization {
     // Override
     //
 
+    @Override
+    public void displayAbout()
+    {
+        System.out.println(this.getPhrase(2) + this.getPhrase(3));
+        System.out.println(this.getPhrase(1));
+        System.out.printf("%-25s %-50s %n", this.getPhrase(4), this.name);
+        System.out.printf("%-25s %-50s %n", this.getPhrase(5), this.shortName);
+        System.out.printf("%-25s %-50s %n", this.getPhrase(6), this.dateOfEstablishment);
+
+        StringBuilder totalColors = new StringBuilder();
+        for(String color : colors)
+        {
+            totalColors.append(color);
+            totalColors.append(", ");
+        }
+        totalColors.append("\b\b");
+
+        System.out.printf("%-25s %-50s %n", this.getPhrase(7), totalColors);
+        System.out.printf("%-25s %-50s %n", this.getPhrase(8), this.ballpark);
+        System.out.printf("%-25s %-50s %n", this.getPhrase(9), this.numWorldSeriesTitles);
+        System.out.printf("%-25s %-50s %n", this.getPhrase(10), this.numNLPennants);
+        System.out.printf("%-25s %-50s %n", this.getPhrase(11), this.numDivisionTitles);
+        System.out.printf("%-25s %-50s %n", this.getPhrase(12), this.numWildCardBerths);
+        System.out.printf("%-25s %-50s %n", this.getPhrase(13), this.owners.getName());
+        System.out.printf("%-25s %-50s %n", this.getPhrase(14), String.format("%s %s", this.president.getFirstName(), this.president.getLastName()));
+        System.out.printf("%-25s %-50s %n", this.getPhrase(15), String.format("%s %s", this.generalManager.getFirstName(), this.generalManager.getLastName()));
+        System.out.printf("%-25s %-50s %n", this.getPhrase(16), String.format("%s %s", this.manager.getFirstName(), this.generalManager.getLastName()));
+        System.out.println(this.getPhrase(1));
+    }
+
     //TODO: Implement
     public void displayMission(){}
-    public void displayAbout(){}
 }

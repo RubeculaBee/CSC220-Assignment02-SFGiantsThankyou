@@ -120,7 +120,8 @@ public final class Language {
             Config.getDefaultLogDirectoryPath(),
             Config.getDefaultUniversity(),
             Config.getDefaultClub(),
-            " - Chat Session Started."
+            " - Chat Session Started.",
+            " - Chat Session Ended."
         };
 
         timerPhrases = new String[]
@@ -140,7 +141,23 @@ public final class Language {
         };
         clubPhrases = new String[]
         {
-            "San Francisco Giants"
+            "San Francisco Giants",
+            "-".repeat(70),
+            "SF Giants: ",
+            "Welcome to the SAN FRANCISCO GIANTS!",
+            "Club:",
+            "Short Name",
+            "Established in:",
+            "Colors:",
+            "Ballpark:",
+            "World Series Titles:",
+            "NL Pennants:",
+            "Division Titles:",
+            "Wild card Berths:",
+            "Owners:",
+            "President:",
+            "General Manager:",
+            "Manager:"
         };
         greetingPhrases = new String[] {""};
     }

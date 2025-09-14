@@ -21,7 +21,9 @@ public final class Manager extends Person {
     //
     // Constructors
     //
-    public Manager() {
+    public Manager(String firstName, String lastName) 
+    {
+        super(firstName, lastName);
     }
 
     //

@@ -18,10 +18,11 @@ public final class GeneralManager extends Person {
     // Instance Data Fields
     //
 
-    //
     // Constructors
     //
-    public GeneralManager() {
+    public GeneralManager(String firstName, String lastName) 
+    {
+        super(firstName, lastName);
     }
 
     //

@@ -39,9 +39,13 @@ public final class Color {
     // Instance Methods
     //
 
-    public String getColorSequences(){return Messenger.getConfig().getLanguage().getConfigPhrase(10);}
+    public String getColorSequences(){return getPhrase(10);}
 
     //
     // Language
     //
+
+    private String getPhrase(int i) {
+        return Messenger.getConfig().getLanguage().getConfigPhrase(i);
+    }
 }

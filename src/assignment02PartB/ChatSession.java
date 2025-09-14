@@ -17,6 +17,8 @@ import java.util.Date;
 public final class ChatSession {
 
     //  Static Data Fields
+    private Club club;
+    private University university;
 
     //
     // Instance Data Fields
@@ -28,8 +30,11 @@ public final class ChatSession {
     public ChatSession() {
     }
 
-    //TODO: Implement
-    public ChatSession(Club club, University university){}
+    public ChatSession(Club club, University university)
+    {
+        this.club = club;
+        this.university = university;
+    }
 
     //
     // Instance Methods
@@ -43,7 +48,9 @@ public final class ChatSession {
         System.out.print(Messenger.getConfig().getTimer().getDateformat().format(new Date()));
         System.out.println(getPhrase(16));
     }
-    private void connectChatters() {
+    private void connectChatters() 
+    {
+        club.displayAbout();
     }
     private void chat() {
     }
@@ -54,6 +61,8 @@ public final class ChatSession {
     public void runChatSession() 
     {
         startChatSession();
+        System.out.println();
+        connectChatters();
     }
 
     //

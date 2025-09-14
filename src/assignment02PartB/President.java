@@ -21,12 +21,16 @@ public final class President extends Person {
     //
     // Constructors
     //
-    public President() {
+    public President(String firstName, String lastName) 
+    {
+        super(firstName, lastName);
     }
 
     //
     // Instance Methods
     //
+
+    
 
     //
     // Language
