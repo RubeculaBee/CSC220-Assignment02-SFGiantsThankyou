@@ -35,6 +35,11 @@ public final class Color {
     // Static Methods
     //
 
+    public static String SFSUHighlight(String msg)
+    {
+        return ANSI_YELLOW + ANSI_PURPLE_BACKGROUND + msg + ANSI_RESET;
+    }
+
     //
     // Instance Methods
     //

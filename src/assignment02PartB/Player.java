@@ -58,9 +58,9 @@ public final class Player extends Person {
         StringBuilder message = new StringBuilder();
 
         for (Object part : messageParts) {
-            if(part instanceof String || part instanceof char)
-                message.append(part);
-            else if(part instanceof int i)
+            if(part instanceof String s)
+                message.append(s);
+            else if(part instanceof Integer i)
                 message.append(getPlayerPhrase(i));
         }
 

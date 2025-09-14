@@ -42,7 +42,9 @@ public final class Student extends Person {
     {
         Scanner input = new Scanner(System.in);
 
-        System.out.printf("%s%s: ", getFirstName(), getLastName());
+        String colouredName = Color.SFSUHighlight(getFirstName() + " " + getLastName());
+
+        System.out.printf("%s: ", colouredName);
 
         return input.nextLine();
     }
@@ -51,7 +53,9 @@ public final class Student extends Person {
     {
         Scanner input = new Scanner(System.in);
 
-        System.out.printf("%s%s: %s ", getFirstName(), getLastName(), startString);
+        String colouredName = Color.SFSUHighlight(getFirstName() + " " + getLastName());
+
+        System.out.printf("%s: %s ", colouredName, startString);
 
         return input.nextLine();
     }

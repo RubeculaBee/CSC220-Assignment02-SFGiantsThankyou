@@ -86,7 +86,7 @@ public final class ChatSession {
         final String fname = university.getSudent().getFirstName() + ". ";
         
         club.getPlayer().say(0, fname, 1);
-        club.getPlayer().say(university.getName().toUpperCase(), 2);
+        club.getPlayer().say(Color.SFSUHighlight(university.getName().toUpperCase()), 2);
         
         university.getSudent().say();
 
@@ -105,7 +105,7 @@ public final class ChatSession {
         
         int numCards = Integer.parseInt(university.getSudent().say());
 
-        club.getPlayer().say(7, '\n', 8, '\n', 9, '\n', 10);
+        club.getPlayer().say(7, "\n", 8, "\n", 9, "\n", 10);
 
         String[] recipients = new String[numCards];
         char[] symbols = new char[numCards];
