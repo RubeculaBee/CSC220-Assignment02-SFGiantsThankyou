@@ -42,7 +42,7 @@ public final class Player extends Person {
     {
         System.out.println(". . . . .");
         System.out.println(getPhrase(1));
-        System.out.printf("%-25s %-50s %n", this.getPhrase(19), this.getFirstName() + this.getLastName());
+        System.out.printf("%-25s %-50s %n", this.getPhrase(19), this.getFirstName() + " " + this.getLastName());
         System.out.printf("%-25s %-50s %n", this.getPhrase(4), this.club.getName());
         System.out.printf("%-25s %-50s %n", this.getPhrase(20), this.position);
         System.out.printf("%-25s %-50s %n", this.getPhrase(21), this.number);
@@ -51,6 +51,20 @@ public final class Player extends Person {
         System.out.printf("%-25s %-50s %n", this.getPhrase(24), this.debut);
         System.out.println(getPhrase(1));
         System.out.println(". . . . .");
+    }
+
+    public void say(Object... messageParts)
+    {
+        StringBuilder message = new StringBuilder();
+
+        for (Object part : messageParts) {
+            if(part instanceof String || part instanceof char)
+                message.append(part);
+            else if(part instanceof int i)
+                message.append(getPlayerPhrase(i));
+        }
+
+        System.out.printf("%s %s, %d: %s\n", getFirstName(), getLastName(), number, message);
     }
 
     //
@@ -70,6 +84,10 @@ public final class Player extends Person {
 
     private String getPhrase(int i) {
         return Messenger.getConfig().getLanguage().getClubPhrase(i);
+    }
+
+    private String getPlayerPhrase(int i) {
+        return Messenger.getConfig().getLanguage().getPlayerPhrase(i);
     }
 
     //

@@ -48,6 +48,7 @@ public final class ChatSession {
         System.out.print(Messenger.getConfig().getTimer().getDateformat().format(new Date()));
         System.out.println(getPhrase(16));
     }
+
     private void connectChatters() 
     {
         club.displayAbout();
@@ -59,11 +60,38 @@ public final class ChatSession {
 
         System.out.println();
 
-        club.setPlayer("Buster Posy");
+        club.setPlayer("Buster Posey");
         club.getPlayer().displayAbout();
     }
-    private void chat() {
+
+    private void chat() 
+    {
+        // Formatted Student First Name
+        final String fname = university.getSudent().getFirstName() + ". ";
+        
+        club.getPlayer().say(0, fname, 1);
+        club.getPlayer().say(university.getName().toUpperCase(), 2);
+        
+        university.getSudent().say();
+
+        club.getPlayer().say(3, fname, 4);
+        club.getPlayer().say(5, club.getShortName(), 6);
+
+        int numCards = Integer.parseInt(university.getSudent().say());
+
+        club.getPlayer().say(7, '\n', 8, '\n', 9, '\n', 10);
+
+        for(int i = 1; i <= numCards; i++)
+        {
+            club.getPlayer().say(11, String.valueOf(i), ":");
+            university.getSudent().say("[1]");
+            university.getSudent().say("[2]");
+            university.getSudent().say("[3]");
+        }
+
+        club.getPlayer().say(12, fname, 13);
     }
+
     private void runQuiz() {
     }
     private void stopChatSession() {
@@ -71,8 +99,12 @@ public final class ChatSession {
     public void runChatSession() 
     {
         startChatSession();
+
         System.out.println();
+
         connectChatters();
+        chat();
+
     }
 
     //

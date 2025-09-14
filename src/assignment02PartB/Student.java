@@ -12,6 +12,8 @@ package assignment02PartB;
 // Please organize all the given files in 1 same package
 // Please make sure to read the provided "_ListOf-PleaseDoNotChange.txt"
 
+import java.util.Scanner;
+
 public final class Student extends Person {
 
     //
@@ -35,6 +37,24 @@ public final class Student extends Person {
     //
     // Instance Methods
     //
+
+    public String say()
+    {
+        Scanner input = new Scanner(System.in);
+
+        System.out.printf("%s%s: ", getFirstName(), getLastName());
+
+        return input.nextLine();
+    }
+
+    public String say(String startString)
+    {
+        Scanner input = new Scanner(System.in);
+
+        System.out.printf("%s%s: %s ", getFirstName(), getLastName(), startString);
+
+        return input.nextLine();
+    }
 
     //
     // Additional Methods

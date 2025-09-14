@@ -39,6 +39,7 @@ public final class Language {
     private String[] timerPhrases;
     private String[] universityPhrases;
     private String[] clubPhrases;
+    private String[] playerPhrases;
     private String[] greetingPhrases;
 
     //
@@ -155,6 +156,7 @@ public final class Language {
             "Mascot:",                          // 15
             "Website:"                          // 16
         };
+
         clubPhrases = new String[]
         {
             "San Francisco Giants",                     // 0
@@ -176,7 +178,7 @@ public final class Language {
             "Manager:",                                 // 16
 
             "Thank You. ",                              // 17
-            "We are connecting you with out player...", // 18
+            "We are connecting you with our player...", // 18
 
             "Player:",                                  // 19
             "Position:",                                // 20
@@ -185,6 +187,27 @@ public final class Language {
             "Throws",                                   // 23
             "MLB Debut:"                                // 24
         };
+
+        playerPhrases = new String[]
+        {
+            "Hello ",                                   // 0
+            "C-O-N-G-R-A-T-U-L-A-T-I-O-N-S!",           // 1
+            ". Way to go!",                             // 2
+            "Likewise, ",                               // 3
+            "Very nice chatting w/ you.",               // 4
+            "How many ",                                // 5
+            " Thank you cards would you like to order?",// 6
+            "In 3 lines, please provide",               // 7
+            "   [1] Recipient name",                    // 8
+            "   [2] Art symbol (a character)",          // 9
+            "   [3] Message to recipient",              // 10
+            "Card #",                                   // 11
+            "Thanks, ",                                 // 12
+            "Please confirm your order:",               // 13
+            "Thank you again, ",                        // 14
+            "See you at your graduation ceramony!"      // 15
+        };
+
         greetingPhrases = new String[] {""};
     }
 
@@ -194,9 +217,10 @@ public final class Language {
     public String getLanguage(){return languageName;}
     public String getConfigPhrase(int i){return configPhrases[i];}
     public String getTimerPhrase(int i){return timerPhrases[i];};
-    public String getGreetingPhrase(int i){return "";}
     public String getUniversityPhrase(int i){return universityPhrases[i];}
     public String getClubPhrase(int i){return clubPhrases[i];}
+    public String getPlayerPhrase(int i){return playerPhrases[i];}
+    public String getGreetingPhrase(int i){return "";}
 
     // Future Implementation
     public void populateChinesePhrases(){}

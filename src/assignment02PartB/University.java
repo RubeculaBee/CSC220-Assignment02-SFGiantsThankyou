@@ -86,6 +86,9 @@ public final class University extends Organization {
     // Additional Methods
     //
 
+    public Student getSudent() {return student;};
+    public String getName() {return name;};
+
     //
     // Language
     //

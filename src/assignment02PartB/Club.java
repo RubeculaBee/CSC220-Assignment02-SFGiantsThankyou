@@ -75,9 +75,9 @@ public final class Club extends Organization {
     {
         System.out.println(getPhrase(2) + getPhrase(17) + getPhrase(18));
         
-        if(player == "Buster Posy")
+        if(player == "Buster Posey")
         {
-            this.player = new Player("Buster", "Posy");
+            this.player = new Player("Buster", "Posey");
             this.player.setClub(this);
             this.player.setPosition("Catcher");
             this.player.setNumber(28);
@@ -91,15 +91,10 @@ public final class Club extends Organization {
     // Additional Instance Methods
     //
 
-    public Player getPlayer()
-    {
-        return player;
-    }
+    public Player getPlayer(){return player;}
 
-    public String getName()
-    {
-        return name;
-    }
+    public String getName(){return name;}
+    public String getShortName(){return shortName;}
 
     //
     // Language
