@@ -36,8 +36,8 @@ public class StdOutStdErrTee extends OutputStream {
     public void startLog(){}
     public void stopLog(){}
 
-    public String getStdOutFilePath(){return "";}
-    public String getStdErrFilePath(){return "";}
+    public String getStdOutFilePath(){return Messenger.getConfig().getLanguage().getConfigPhrase(11);}
+    public String getStdErrFilePath(){return Messenger.getConfig().getLanguage().getConfigPhrase(12);}
 
     //
     // Additional Methods

@@ -114,6 +114,12 @@ public final class Language {
             "Receipt-*-*.log",
             "Default University: ",
             "Default Club: ",
+            Config.getDefaultColorSequences(),
+            Config.getDefaultStdOutFilePath(),
+            Config.getDefaultStdErrFilePath(),
+            Config.getDefaultLogDirectoryPath(),
+            Config.getDefaultUniversity(),
+            Config.getDefaultClub()
         };
 
         timerPhrases = new String[]
@@ -127,8 +133,14 @@ public final class Language {
             "Eastern Standard Time in Day Light Saving"
         };
         
-        greetingPhrases = new String[] {""};
-        greetingPhrases = new String[] {""};
+        universityPhrases = new String[]
+        {
+            "San Francisco State University"
+        };
+        clubPhrases = new String[]
+        {
+            "San Francisco Giants"
+        };
         greetingPhrases = new String[] {""};
     }
 
@@ -139,8 +151,8 @@ public final class Language {
     public String getConfigPhrase(int i){return configPhrases[i];}
     public String getTimerPhrase(int i){return timerPhrases[i];};
     public String getGreetingPhrase(int i){return "";}
-    public String getUniversityPhrase(int i){return "";}
-    public String getClubPhrase(int i){return "";}
+    public String getUniversityPhrase(int i){return universityPhrases[i];}
+    public String getClubPhrase(int i){return clubPhrases[i];}
 
     // Future Implementation
     public void populateChinesePhrases(){}

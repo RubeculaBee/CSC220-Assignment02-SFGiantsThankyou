@@ -39,7 +39,7 @@ public final class Color {
     // Instance Methods
     //
 
-    public String getColorSequences(){return Config.getDefaultColorSequences();}
+    public String getColorSequences(){return Messenger.getConfig().getLanguage().getConfigPhrase(10);}
 
     //
     // Language

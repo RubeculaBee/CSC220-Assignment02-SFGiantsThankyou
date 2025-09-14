@@ -37,7 +37,7 @@ public final class Directory {
     //
 
     //TODO: Implement
-    public String getPath(){return "";}
+    public String getPath(){return Messenger.getConfig().getLanguage().getConfigPhrase(13);}
 
     //
     // Language
