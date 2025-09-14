@@ -111,7 +111,7 @@ public final class Club extends Organization {
         System.out.printf("%-25s %-50s %n", this.getPhrase(13), this.owners.getName());
         System.out.printf("%-25s %-50s %n", this.getPhrase(14), String.format("%s %s", this.president.getFirstName(), this.president.getLastName()));
         System.out.printf("%-25s %-50s %n", this.getPhrase(15), String.format("%s %s", this.generalManager.getFirstName(), this.generalManager.getLastName()));
-        System.out.printf("%-25s %-50s %n", this.getPhrase(16), String.format("%s %s", this.manager.getFirstName(), this.generalManager.getLastName()));
+        System.out.printf("%-25s %-50s %n", this.getPhrase(16), String.format("%s %s", this.manager.getFirstName(), this.manager.getLastName()));
         System.out.println(this.getPhrase(1));
     }
 

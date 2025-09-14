@@ -18,10 +18,18 @@ public final class Student extends Person {
     // Instance Data Fields
     //
 
+    private String email;
+
     //
     // Constructors
     //
     public Student() {
+    }
+
+    public Student(String firstName, String lastName, String email)
+    {
+        super(firstName, lastName);
+        this.email = email;
     }
 
     //

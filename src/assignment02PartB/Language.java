@@ -121,7 +121,7 @@ public final class Language {
             Config.getDefaultUniversity(),
             Config.getDefaultClub(),
             " - Chat Session Started.",
-            " - Chat Session Ended."
+            " - Chat Session Ended.",
         };
 
         timerPhrases = new String[]
@@ -137,7 +137,23 @@ public final class Language {
         
         universityPhrases = new String[]
         {
-            "San Francisco State University"
+            "San Francisco State University",   // 0
+            "-".repeat(70),                     // 1
+            "Your first name and last name",    // 2
+            "Your school email address",        // 3
+            ", please: ",                       // 4
+            "Welcome to my university!",        // 5
+            "Official Name:",                   // 6
+            "Motto in Latin",                   // 7
+            "Motto in English",                 // 8
+            "Type:",                            // 9
+            "Year of Establishment:",           // 10
+            "Location:",                        // 11
+            "Address:",                         // 12
+            "Colors:",                          // 13
+            "Nickname:",                        // 14
+            "Mascot:",                          // 15
+            "Website:"                          // 16
         };
         clubPhrases = new String[]
         {

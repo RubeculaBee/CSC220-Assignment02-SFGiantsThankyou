@@ -51,6 +51,9 @@ public final class ChatSession {
     private void connectChatters() 
     {
         club.displayAbout();
+        System.out.println();
+        university.setStudent();
+        university.displayAbout();
     }
     private void chat() {
     }
