@@ -229,12 +229,25 @@ public final class Language {
             "Thank you again, ",                        // 14
             "See you at your graduation ceramony!"      // 15
         };
-
-        greetingPhrases = new String[] {""};
     }
 
     // TODO: Implement
-    public void populateAlienPhrases(){}
+    public void populateAlienPhrases()
+    {
+        languageName = Language.defaultAlienSound;
+
+        configPhrases = new String[23];
+        timerPhrases = new String[7];
+        universityPhrases = new String[17];
+        clubPhrases = new String[38];
+        playerPhrases = new String[17];
+
+        String[][] phraseList = new String[][] {configPhrases, timerPhrases, universityPhrases, clubPhrases, playerPhrases};
+
+        for(String[] list : phraseList)
+            for(int i = 0; i < list.length; i++)
+                list[i] = Language.defaultAlienSound;
+    }
 
     public String getLanguage(){return languageName;}
     public String getConfigPhrase(int i){return configPhrases[i];}
