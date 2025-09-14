@@ -51,9 +51,16 @@ public final class ChatSession {
     private void connectChatters() 
     {
         club.displayAbout();
+
         System.out.println();
+
         university.setStudent();
         university.displayAbout();
+
+        System.out.println();
+
+        club.setPlayer("Buster Posy");
+        club.getPlayer().displayAbout();
     }
     private void chat() {
     }

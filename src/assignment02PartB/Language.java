@@ -37,9 +37,9 @@ public final class Language {
 
     private String[] configPhrases;
     private String[] timerPhrases;
-    private String[] greetingPhrases;
     private String[] universityPhrases;
     private String[] clubPhrases;
+    private String[] greetingPhrases;
 
     //
     // Constructors
@@ -157,23 +157,33 @@ public final class Language {
         };
         clubPhrases = new String[]
         {
-            "San Francisco Giants",
-            "-".repeat(70),
-            "SF Giants: ",
-            "Welcome to the SAN FRANCISCO GIANTS!",
-            "Club:",
-            "Short Name",
-            "Established in:",
-            "Colors:",
-            "Ballpark:",
-            "World Series Titles:",
-            "NL Pennants:",
-            "Division Titles:",
-            "Wild card Berths:",
-            "Owners:",
-            "President:",
-            "General Manager:",
-            "Manager:"
+            "San Francisco Giants",                     // 0
+            "-".repeat(70),                             // 1
+            "SF Giants: ",                              // 2
+            "Welcome to the SAN FRANCISCO GIANTS!",     // 3
+            "Club:",                                    // 4
+            "Short Name",                               // 5
+            "Established in:",                          // 6
+            "Colors:",                                  // 7
+            "Ballpark:",                                // 8
+            "World Series Titles:",                     // 9
+            "NL Pennants:",                             // 10
+            "Division Titles:",                         // 11
+            "Wild card Berths:",                        // 12
+            "Owners:",                                  // 13
+            "President:",                               // 14
+            "General Manager:",                         // 15
+            "Manager:",                                 // 16
+
+            "Thank You. ",                              // 17
+            "We are connecting you with out player...", // 18
+
+            "Player:",                                  // 19
+            "Position:",                                // 20
+            "Number:",                                  // 21
+            "Bats:",                                    // 22
+            "Throws",                                   // 23
+            "MLB Debut:"                                // 24
         };
         greetingPhrases = new String[] {""};
     }

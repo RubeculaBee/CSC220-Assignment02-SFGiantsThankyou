@@ -32,6 +32,8 @@ public final class Club extends Organization {
     private GeneralManager generalManager;
     private Manager manager;
 
+    private Player player;
+
 
     //
     // Constructors
@@ -69,9 +71,35 @@ public final class Club extends Organization {
     // Instance Methods
     //
 
+    public void setPlayer(String player)
+    {
+        System.out.println(getPhrase(2) + getPhrase(17) + getPhrase(18));
+        
+        if(player == "Buster Posy")
+        {
+            this.player = new Player("Buster", "Posy");
+            this.player.setClub(this);
+            this.player.setPosition("Catcher");
+            this.player.setNumber(28);
+            this.player.setBattingHand("Right");
+            this.player.setThrowingHand("right");
+            this.player.setDebut(2009);
+        }
+    }
+
     //
     // Additional Instance Methods
     //
+
+    public Player getPlayer()
+    {
+        return player;
+    }
+
+    public String getName()
+    {
+        return name;
+    }
 
     //
     // Language
