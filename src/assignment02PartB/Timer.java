@@ -30,7 +30,7 @@ public class Timer {
     // Instance Data Fields
     //
 
-    private DateFormat dateformat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+    private DateFormat dateformat = new SimpleDateFormat("yyyy/MM/dd hh:mm:ss [SSSS 'ms'] a zz");
 
     //
     // Constructors
@@ -78,6 +78,14 @@ public class Timer {
     // Instance Methods
     //
 
+    public DateFormat getDateformat() {
+        return dateformat;
+    }
+
+    //
+    // Additional Instance Methods
+    //
+
     public String getTimeZoneFormatted()
     {
         int timeZoneID = switch(dateformat.getTimeZone().getDisplayName(false, TimeZone.SHORT))
@@ -90,14 +98,14 @@ public class Timer {
         if(dateformat.getTimeZone().inDaylightTime(new Date()))
             timeZoneID++;
         
-        return Messenger.getConfig().getLanguage().getTimerPhrase(timeZoneID);
+        return getPhrase(timeZoneID);
     }
-
-    //
-    // Additional Instance Methods
-    //
 
     //
     // Language
     //
+
+    private String getPhrase(int i) {
+        return Messenger.getConfig().getLanguage().getTimerPhrase(i);
+    }
 }

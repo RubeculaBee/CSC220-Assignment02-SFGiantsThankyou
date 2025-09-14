@@ -46,6 +46,10 @@ public final class Club extends Organization {
     // Language
     //
 
+    private String getPhrase(int i) {
+        return Messenger.getConfig().getLanguage().getClubPhrase(i);
+    }
+    
     //
     // Override
     //

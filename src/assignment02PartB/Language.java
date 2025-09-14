@@ -119,7 +119,8 @@ public final class Language {
             Config.getDefaultStdErrFilePath(),
             Config.getDefaultLogDirectoryPath(),
             Config.getDefaultUniversity(),
-            Config.getDefaultClub()
+            Config.getDefaultClub(),
+            " - Chat Session Started."
         };
 
         timerPhrases = new String[]
