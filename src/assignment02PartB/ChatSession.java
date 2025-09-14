@@ -54,7 +54,9 @@ public final class ChatSession {
         chat();
 
         System.out.println();
+
         runQuiz();
+        stopChatSession();
     }
 
     private void startChatSession() 
@@ -163,7 +165,10 @@ public final class ChatSession {
             System.out.println(getPhrase(18));
     }
 
-    private void stopChatSession() {
+    private void stopChatSession()
+    {
+        System.out.print(Messenger.getConfig().getTimer().getDateformat().format(new Date()));
+        System.out.println(getPhrase(17));
     }
     
 

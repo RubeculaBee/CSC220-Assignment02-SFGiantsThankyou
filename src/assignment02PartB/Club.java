@@ -57,7 +57,7 @@ public final class Club extends Organization {
             owners = new OwnerGroup("San Francisco Baseball Associates LLC");
             president = new President("Farhan", "Zaidi");
             generalManager = new GeneralManager("Scott", "Harris");
-            manager = new Manager("Gabe", "Keplar");
+            manager = new Manager("Gabe", "Kapler");
         }
     }
 

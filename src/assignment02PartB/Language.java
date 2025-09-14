@@ -121,8 +121,8 @@ public final class Language {
             Config.getDefaultLogDirectoryPath(),// 13
             Config.getDefaultUniversity(),      // 14
             Config.getDefaultClub(),            // 15
-            " - Chat Session Started.",         // 16
-            " - Chat Session Ended.",           // 17
+            " - Chat session Started.",         // 16
+            " - Chat session Ended.",           // 17
 
             "*** Congrats! You won FREE TICKETS to SF GIANTS Games ***",// 18
             "____ Please try again at your graduation ceremony. ____"   // 19
@@ -200,7 +200,7 @@ public final class Language {
             " _ 1 miss allowed _",                                      // 31
             "Which type of class has 'protected' constructors",         // 32
             "What type of method did Java 8 add to 'interface'",        // 33
-            "What new keyword did java 13 add to 'switch' statement",   // 34
+            "What new keyword did Java 13 add to 'switch' statement",   // 34
             "In Java 15, what keyword pairs with 'sealed'",             // 35
             "Giants in Spanish",                                        // 36
             "Take me out to the...",                                    // 37
