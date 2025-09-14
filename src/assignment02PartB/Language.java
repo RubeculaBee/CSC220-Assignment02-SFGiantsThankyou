@@ -196,7 +196,7 @@ public final class Language {
             "Likewise, ",                               // 3
             "Very nice chatting w/ you.",               // 4
             "How many ",                                // 5
-            " Thank you cards would you like to order?",// 6
+            " Thank You cards would you like to order?",// 6
             "In 3 lines, please provide",               // 7
             "   [1] Recipient name",                    // 8
             "   [2] Art symbol (a character)",          // 9

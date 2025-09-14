@@ -81,15 +81,36 @@ public final class ChatSession {
 
         club.getPlayer().say(7, '\n', 8, '\n', 9, '\n', 10);
 
-        for(int i = 1; i <= numCards; i++)
+        String[] recipients = new String[numCards];
+        char[] symbols = new char[numCards];
+        String[] messages = new String[numCards];
+
+
+        for(int i = 0; i < numCards; i++)
         {
-            club.getPlayer().say(11, String.valueOf(i), ":");
-            university.getSudent().say("[1]");
-            university.getSudent().say("[2]");
-            university.getSudent().say("[3]");
+            club.getPlayer().say(11, String.valueOf(i+1), ":");
+            recipients[i] = university.getSudent().say("[1]");
+            symbols[i] = university.getSudent().say("[2]").charAt(0);
+            messages[i] = university.getSudent().say("[3]");
         }
 
         club.getPlayer().say(12, fname, 13);
+
+        for(int i=0; i< numCards; i++)
+        {
+            System.out.println();
+
+            try
+            {
+                SFGiantsCardGenerator.generateSFGiantsCard(recipients[i], messages[i], university.getSudent().getFirstName(), university.getSudent().getEmail(), symbols[i], 12, "");
+            }
+            catch(Exception e)
+            {
+                System.out.println(e.getMessage() + ": ERROR In Card Generation");
+            }
+
+            System.out.println();
+        }
     }
 
     private void runQuiz() {

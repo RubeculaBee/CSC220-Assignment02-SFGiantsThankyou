@@ -60,6 +60,11 @@ public final class Student extends Person {
     // Additional Methods
     //
 
+    public String getEmail()
+    {
+        return this.email;
+    }
+
     //
     // Language
     //
