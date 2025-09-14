@@ -87,6 +87,20 @@ public final class Club extends Organization {
         }
     }
 
+    public void say(Object... messageParts)
+    {
+        StringBuilder message = new StringBuilder();
+
+        for (Object part : messageParts) {
+            if(part instanceof String || part instanceof char)
+                message.append(part);
+            else if(part instanceof int i)
+                message.append(getPhrase(i));
+        }
+
+        System.out.printf("%s: %s\n", getPhrase(2), message);
+    }
+
     //
     // Additional Instance Methods
     //

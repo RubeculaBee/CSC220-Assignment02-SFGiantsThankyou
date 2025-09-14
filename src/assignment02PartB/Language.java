@@ -105,35 +105,38 @@ public final class Language {
 
         configPhrases = new String[] 
         {
-            "-".repeat(70),
-            "Language: ",
-            "Time Zone: ",
-            "Color Sequences: ",
-            "Standard Output Log: ",
-            "Standard Error Log: ",
-            "Receipt Log: ",
-            "Receipt-*-*.log",
-            "Default University: ",
-            "Default Club: ",
-            Config.getDefaultColorSequences(),
-            Config.getDefaultStdOutFilePath(),
-            Config.getDefaultStdErrFilePath(),
-            Config.getDefaultLogDirectoryPath(),
-            Config.getDefaultUniversity(),
-            Config.getDefaultClub(),
-            " - Chat Session Started.",
-            " - Chat Session Ended.",
+            "-".repeat(70),                     // 0
+            "Language: ",                       // 1
+            "Time Zone: ",                      // 2
+            "Color Sequences: ",                // 3
+            "Standard Output Log: ",            // 4
+            "Standard Error Log: ",             // 5
+            "Receipt Log: ",                    // 6
+            "Receipt-*-*.log",                  // 7
+            "Default University: ",             // 8
+            "Default Club: ",                   // 9
+            Config.getDefaultColorSequences(),  // 10
+            Config.getDefaultStdOutFilePath(),  // 11
+            Config.getDefaultStdErrFilePath(),  // 12
+            Config.getDefaultLogDirectoryPath(),// 13
+            Config.getDefaultUniversity(),      // 14
+            Config.getDefaultClub(),            // 15
+            " - Chat Session Started.",         // 16
+            " - Chat Session Ended.",           // 17
+
+            "*** Congrats! You won FREE TICKETS to SF GIANTS Games ***",// 18
+            "____ Please try again at your graduation ceremony. ____"   // 19
         };
 
         timerPhrases = new String[]
         {
-            "INVALID time zone. Please enter your time zone.",
-            "Pacific Standard Time not in Day Light Saving",
-            "Pacific Standard Time in Day Light Saving",
-            "Central Standard Time not in Day Light Saving",
-            "Central Standard Time in Day Light Saving",
-            "Eastern Standard Time not in Day Light Saving",
-            "Eastern Standard Time in Day Light Saving"
+            "INVALID time zone. Please enter your time zone.",  // 0
+            "Pacific Standard Time not in Day Light Saving",    // 1
+            "Pacific Standard Time in Day Light Saving",        // 2
+            "Central Standard Time not in Day Light Saving",    // 3
+            "Central Standard Time in Day Light Saving",        // 4
+            "Eastern Standard Time not in Day Light Saving",    // 5
+            "Eastern Standard Time in Day Light Saving"         // 6
         };
         
         universityPhrases = new String[]
@@ -159,33 +162,48 @@ public final class Language {
 
         clubPhrases = new String[]
         {
-            "San Francisco Giants",                     // 0
-            "-".repeat(70),                             // 1
-            "SF Giants: ",                              // 2
-            "Welcome to the SAN FRANCISCO GIANTS!",     // 3
-            "Club:",                                    // 4
-            "Short Name",                               // 5
-            "Established in:",                          // 6
-            "Colors:",                                  // 7
-            "Ballpark:",                                // 8
-            "World Series Titles:",                     // 9
-            "NL Pennants:",                             // 10
-            "Division Titles:",                         // 11
-            "Wild card Berths:",                        // 12
-            "Owners:",                                  // 13
-            "President:",                               // 14
-            "General Manager:",                         // 15
-            "Manager:",                                 // 16
+            "San Francisco Giants",                 // 0
+            "-".repeat(70),                         // 1
+            "SF Giants: ",                          // 2
+            "Welcome to the SAN FRANCISCO GIANTS!", // 3
+            "Club:",                                // 4
+            "Short Name",                           // 5
+            "Established in:",                      // 6
+            "Colors:",                              // 7
+            "Ballpark:",                            // 8
+            "World Series Titles:",                 // 9
+            "NL Pennants:",                         // 10
+            "Division Titles:",                     // 11
+            "Wild card Berths:",                    // 12
+            "Owners:",                              // 13
+            "President:",                           // 14
+            "General Manager:",                     // 15
+            "Manager:",                             // 16
 
             "Thank You. ",                              // 17
             "We are connecting you with our player...", // 18
 
-            "Player:",                                  // 19
-            "Position:",                                // 20
-            "Number:",                                  // 21
-            "Bats:",                                    // 22
-            "Throws",                                   // 23
-            "MLB Debut:"                                // 24
+            "Player:",      // 19
+            "Position:",    // 20
+            "Number:",      // 21
+            "Bats:",        // 22
+            "Throws",       // 23
+            "MLB Debut:",   // 24
+
+            "?",        // 25
+            "!",        // 26 
+            "...",      // 27
+            "Correct",  // 28
+            "Oops",     // 29
+            
+            "*** FREE TICKETS to SF GIANTS Games ***",                  // 30
+            " _ 1 miss allowed _",                                      // 31
+            "Which type of class has 'protected' constructors",         // 32
+            "What type of method did Java 8 add to 'interface'",        // 33
+            "What new keyword did java 13 add to 'switch' statement",   // 34
+            "In Java 15, what keyword pairs with 'sealed'",             // 35
+            "Giants in Spanish",                                        // 36
+            "Take me out to the...",                                    // 37
         };
 
         playerPhrases = new String[]

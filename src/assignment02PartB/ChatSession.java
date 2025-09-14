@@ -43,6 +43,20 @@ public final class ChatSession {
     //
     // Additional Instance Methods
     //
+
+    public void runChatSession() 
+    {
+        startChatSession();
+
+        System.out.println();
+
+        connectChatters();
+        chat();
+
+        System.out.println();
+        runQuiz();
+    }
+
     private void startChatSession() 
     {
         System.out.print(Messenger.getConfig().getTimer().getDateformat().format(new Date()));
@@ -78,6 +92,9 @@ public final class ChatSession {
         club.getPlayer().say(5, club.getShortName(), 6);
 
         designThankYouCards();
+
+        university.getSudent().say();
+        club.getPlayer().say(14, fname, 15);
     }
 
     private void designThankYouCards()
@@ -118,20 +135,37 @@ public final class ChatSession {
         }
     }
 
-    private void runQuiz() {
+    private void runQuiz() 
+    {
+        String[] answers = new String[] {"abstract", "default", "yield", "permits", "gigantes", "ball game"};
+        String response;
+        int misses = 0;
+
+        club.say(30,31);
+
+        for(int i = 0; i < answers.length; i++)
+        {
+            club.say(32+i,25);
+            response = university.getSudent().say().toLowerCase();
+
+            if(response.equals(answers[i]))
+                club.say(28,26);
+            else
+            {
+                club.say(29,27);
+                misses++;
+            }
+        }
+
+        if(misses > 1)
+            System.out.println(getPhrase(19));
+        else
+            System.out.println(getPhrase(18));
     }
+
     private void stopChatSession() {
     }
-    public void runChatSession() 
-    {
-        startChatSession();
-
-        System.out.println();
-
-        connectChatters();
-        chat();
-
-    }
+    
 
     //
     // Language
