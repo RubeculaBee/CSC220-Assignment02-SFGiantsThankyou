@@ -4,7 +4,7 @@
  * CSC 220 -  Data Structures
  * File Name: Directory.java
  * Author: Duc Ta
- * Author: <First Name> <Last Name>
+ * Author: Robin Lane
  * **********************************************
  */
 
@@ -36,7 +36,6 @@ public final class Directory {
     // Instance Methods
     //
 
-    //TODO: Implement
     public String getPath(){return Messenger.getConfig().getLanguage().getConfigPhrase(13);}
 
     //
