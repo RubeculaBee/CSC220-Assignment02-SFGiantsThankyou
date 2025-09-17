@@ -104,7 +104,7 @@ public final class University extends Organization {
     @Override
     public void displayAbout()
     {
-        System.out.print(student.getFirstName() + student.getLastName() + ": ");
+        System.out.print(Color.SFSUHighlight(student.getFirstName() + student.getLastName()) + ": ");
         System.out.println(getPhrase(5));
         System.out.println(getPhrase(1));
         System.out.printf("%-25s %-50s %n", this.getPhrase(6), name);
